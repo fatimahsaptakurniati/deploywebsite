@@ -1,0 +1,435 @@
+* {
+  scroll-behavior: smooth;
+  }
+
+/*COLOR*/
+:root{
+    --main-white:white;
+    --main-black: #121212;
+    --main-yellow: #fee48b;
+    --main-purple: #e4c3c5;
+    --main-orange: #ff815a;
+  }
+  /*COLOR*/
+  
+  
+  html{
+    box-sizing: border-box;
+  }
+  
+  *, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body{
+    font-family: montserrat !important;
+    margin: auto;
+    background-color: var(--main-white);
+  }
+  
+  /*CSS NAVIGASI BAR*/
+  #navbar{
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    display: block;
+    height: 3rem;
+  }
+  
+  #navbar>ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*ngilangin poin list*/
+    align-items: center; /*center secara vertical*/
+    height: 100%;
+    padding: 0 30px;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+  
+  
+  }
+  
+  #navbar>ul>li{
+    padding: 10px 15px;
+  }
+  
+  #navbar>ul>li:hover{
+    padding: 10px 15px;
+    background-color: var(--main-orange);
+    border-radius: 25px;
+  }
+  
+  #navbar>ul>li>a{
+    color: var(--main-black);
+    font-weight: 500;
+  }
+  
+  .navlink{
+    text-decoration: none; /*ngilangin garis bawah link*/
+  }
+  /*CSS NAVIGASI BAR*/
+  
+  /*CSS HEADER*/
+  header{
+    margin-top: 40px;
+    width: 100%;
+    height: 350px;
+    background-color: var(--main-white);
+    color: var(--main-black);
+    
+  }
+
+  .title-welcome{
+    text-align: center;
+  }
+  
+  #welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/*center text jadi ketengah secara vertical*/
+    align-items: center;/*center text jadi ketengah secara horizontal*/
+    background-color: var(--main-white);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  
+  
+  .CTA{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .CTA-Button{
+    padding: 5px 20px;
+    border: 1.5px solid var(--main-black);
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: montserrat;
+  }
+  
+  .CTA-Button:hover{
+    background-color: var(--main-black);
+    color: var(--main-purple);
+  }
+  /*CSS HEADER*/
+  
+  /*SECTION ABOUT ME*/
+  .profile-section{
+  background-color: var(--main-yellow);
+  width: 90%;
+  margin: auto;
+  padding: 50px;
+  border-radius: 40px;
+  height: fit-content;
+  max-width: 1500px;
+  }
+  
+  .profile{ /*PHOTO DAN INTRO*/
+    display: grid;
+    grid-template-columns: minmax(min-content, 0.5fr) minmax(500px, 2fr);
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .profile>img{ /*PHOTO ONLY*/
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border: 10px solid white;
+  justify-items: center;
+  }
+  
+  .introduction{ /*INTRO & TITLE ARTICLE*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  
+  .title-caption{ /*TITLE ARTICLE*/
+    border: 1.5px solid var(--main-black);
+    border-radius: 30px;
+    width: fit-content;
+    padding: 5px 20px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    background-color: var(--main-white);
+  }
+  
+  .introduction>p{ /*SUBTITLE ARTICLE*/
+    font-size: 1.3rem;
+    margin-left: 10px;
+    height: 100%;
+    
+  }
+  
+  .experience-ability{ /*DIV EXPERIENCE & ABILITY*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+    width: 100%;
+    margin-bottom: 20px;
+  
+    
+  }
+  
+  .Experience-timeline{ /*DIV EXPERIENCE TIMELINE*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+  }
+  
+  .years{/*DIV YEARS*/
+    background-color: var(--main-orange);
+    border-radius: 20px;
+    padding: 7px 25px;
+    height: 100%;
+    text-align: left;
+    
+  }
+  .years>p{ /*YEARS TEXT*/
+    height: 100%;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    
+  }
+  
+  .exp{ /*MASING-MASING EXPERIENCENYA*/
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  
+  
+  .list-ability{/*DIV LIST ABILITY*/
+    width: 400px;
+    overflow: hidden;
+    height: 100%;
+    
+  }
+  
+  .list-ability>ul{/*UNORDERED LIST ABILITY*/
+    
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  
+    gap: 10px;
+    color: white;
+    overflow-y: auto;
+    padding-left: 10px;
+  }
+  
+  .list-ability>ul>li{/*LIST ABILITY*/
+    list-style-type: none;
+    background-color: var(--main-orange);
+    padding: 2px 9px;
+    border-radius: 10px;
+    font-weight: 500;
+
+  }
+  
+  
+  .Ability:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .Ability>h2{ /*TITLE ABILITY*/
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+  
+  .Skill{/*DIV SKILL*/
+    margin: auto;
+  }
+  
+  .Skill img{ /*IMG SKILL*/
+    width: 80px;
+    border-radius: 20px;
+    height: 100%;
+  
+  
+  }
+  .img-icon{/*DIV IMG ICON*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+
+  }
+
+  .img-icon:hover{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+
+  .img-icon h4{ /*CAPTION SKILL*/
+    font-size: 0.8rem;
+  }
+  
+  .Skill-icon{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    justify-content: center;
+    place-items: center;
+  }
+  
+  .Skill>h2{ /*TITLE SKILL*/
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+
+  
+  /*INI ADALAH CSS UNTUK SECTION PROJECT*/
+  
+  .project-section{
+    margin: auto;
+    padding: 50px 100px;
+    width: 100%;
+    margin: auto;
+    max-width: 1500px;
+  }
+  .project-section>h2{/*TITLE SECTION PROJECTS*/
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+    margin-bottom: 20px;
+   
+  }
+
+  .projects-grid img{/*PROJECTS GRID IMAGE*/
+    height: 200px;
+    border-radius: 20px;
+
+  }
+
+  .projects-grid{/*PROJECTS GRUD*/
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    justify-content: center;
+    margin-bottom: 50px;
+  
+
+  }
+
+  .project-section input{/*PROJECTS BUTTON*/
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    font-family: montserrat;
+    margin: auto;
+    display: block;
+    border: 0px solid var(--main-black);
+    background-color: var(--main-black);
+    font-weight: 500;
+    color: var(--main-white);
+
+  }
+  
+  .project-section input:hover{
+    background-color: var(--main-orange);
+    cursor: pointer;
+  }
+
+  .project-section a{/*LINK BUTTON*/
+    text-decoration: none;
+  }
+
+  .contact-section-header>p{
+    font-size: 2rem;
+  }
+
+
+/*SECTION CONTACT*/
+  .contact-section{
+    background-color: var(--main-purple);
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .contact-section-header{/*TITLE & SUBTITLE SECTION CONTACT DIV*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  .contact-section-header h2{/*LET'S GET IN TOUCH*/
+    font-size: 2.5rem;
+  }
+
+  .social-icons{/*SOSMED ICON*/
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    font-size: 2rem;
+    justify-content: center;
+    font-family: montserrat;
+
+  }
+
+  @media (min-width: 650px) and (max-width: 1400x){
+    .Experience-timeline{
+      width: 600px;
+    }
+    }
+  }
+
+@media (max-width: 600px){
+  #welcome-section{
+    width: 500px;
+  }
+
+  .introduction p{
+    font-size: 3rem;
+  }
+}
+
+ 
+
+
+
+  
+  
+  
+  
+  
+  
+  
